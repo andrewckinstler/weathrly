@@ -5,7 +5,10 @@ import { Header } from '../Header/Header'
 class App extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      currentWeather: {},
+      forcast: []
+    }
   }
 
   render() {
