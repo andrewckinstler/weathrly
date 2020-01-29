@@ -13,18 +13,26 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    this.fetchCurrentWeather();
+  componentDidMount = () => {
+    this.fetchCurrentWeather()
+    this.fetchForcast()
   }
 
-  fetchCurrentWeather() {
+  fetchCurrentWeather = () => {
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=colorado,us&units=imperial&appid=2a29c95d88e3e2717635332394645d67'
     const data = fetch(url)
     .then(data => data.json())
     .then(data => this.setState({ currentWeather: data, isLoading: false }))
   }
 
-  render() {
+  fetchForcast = () => {
+    const url = 'https://api.openweathermap.org/data/2.5/forecast?q=colorado,us&units=imperial&appid=2a29c95d88e3e2717635332394645d67'
+    const data = fetch(url)
+    .then(data => data.json())
+    .then(data => this.setState({ forcast: data }))
+  }
+
+  render = () => {
     return (
       <div className="App">
         <Header /> 
