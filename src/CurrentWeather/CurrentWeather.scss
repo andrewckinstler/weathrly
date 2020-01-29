@@ -1,0 +1,38 @@
+section {
+  border-radius: 10px;
+  margin: 50px 100px;
+  padding: 20px 75px;
+  background-color: #fff;
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .minmax {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .today{
+    display: flex;
+    justify-content: space-evenly;
+
+
+    .current-container {
+      text-align: center;
+
+      h2 {
+        font-size: 2.5em;
+      }
+
+      .date {
+        margin-bottom: 5px;
+      }
+
+      .current-temp {
+        display: block;
+        font-size: 2em;
+      }
+    }
+  } 
+}
