@@ -13,26 +13,28 @@ class App extends Component {
     }
   }
 
+  // this.setState({ forcast: filterForcast(data.list) })
+
   componentDidMount = () => {
-    this.fetchCurrentWeather()
-    this.fetchForcast()
-  }
-
-  fetchCurrentWeather = () => {
-    const url = 'https://api.openweathermap.org/data/2.5/weather?q=colorado,us&units=imperial&appid=2a29c95d88e3e2717635332394645d67'
-    const data = fetch(url)
+    let currentWeather = fetch('https://api.openweathermap.org/data/2.5/weather?q=colorado,us&units=imperial&appid=2a29c95d88e3e2717635332394645d67')
+      .then(data => data.json())
+      .then(data => data)
+    
+    let forcast = fetch('https://api.openweathermap.org/data/2.5/forecast?q=colorado,us&units=imperial&appid=2a29c95d88e3e2717635332394645d67')
     .then(data => data.json())
-    .then(data => this.setState({ currentWeather: data, isLoading: false }))
+    .then(data => data)
+
+    Promise.all([currentWeather, forcast])
+    .then(data => {
+      const filterForcast = forcast => {
+        return forcast.filter(obj => obj.dt_txt.includes('12:00:00'))
+      }
+      this.setState({ currentWeather: data[0], forcast: filterForcast(data[1].list), isLoading: false })})
   }
 
-  fetchForcast = () => {
-    const url = 'https://api.openweathermap.org/data/2.5/forecast?q=colorado,us&units=imperial&appid=2a29c95d88e3e2717635332394645d67'
-    const data = fetch(url)
-    .then(data => data.json())
-    .then(data => this.setState({ forcast: data }))
-  }
+  
 
-  render = () => {
+  render() {
     return (
       <div className="App">
         <Header /> 
