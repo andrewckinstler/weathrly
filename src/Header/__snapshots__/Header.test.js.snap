@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match a snapshot 1`] = `
+<header>
+  <h1>
+    weathrly
+  </h1>
+</header>
+`;

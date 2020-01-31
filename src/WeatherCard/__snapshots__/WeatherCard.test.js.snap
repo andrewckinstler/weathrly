@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather card should match a snapshot 1`] = `
+<article
+  className="card"
+>
+  <h3>
+    Sunday 12/30/2001
+  </h3>
+  <img
+    alt="condition icon"
+    src="http://openweathermap.org/img/wn/10d@2x.png"
+  />
+  <p>
+    <span
+      className="bold"
+    >
+      H: 
+    </span>
+    0
+    °/ 
+    <span
+      className="bold"
+    >
+      L: 
+    </span>
+    3
+    °
+  </p>
+</article>
+`;

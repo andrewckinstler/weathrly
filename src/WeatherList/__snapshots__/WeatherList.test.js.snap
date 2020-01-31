@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weather list should match a snapshot 1`] = `
+<div
+  className="card-container"
+>
+  <WeatherCard
+    date="2020-01-31 00:00:00"
+    key="1580428800"
+    main={
+      Object {
+        "feels_like": 13.06,
+        "grnd_level": 726,
+        "humidity": 87,
+        "pressure": 1021,
+        "sea_level": 1021,
+        "temp": 20.79,
+        "temp_kf": 0.41,
+        "temp_max": 20.79,
+        "temp_min": 20.05,
+      }
+    }
+    weather={
+      Array [
+        Object {
+          "description": "light snow",
+          "icon": "13d",
+          "id": 600,
+          "main": "Snow",
+        },
+      ]
+    }
+  />
+  <WeatherCard
+    date="2020-01-31 03:00:00"
+    key="1580439600"
+    main={
+      Object {
+        "feels_like": 2.91,
+        "grnd_level": 728,
+        "humidity": 84,
+        "pressure": 1028,
+        "sea_level": 1028,
+        "temp": 11.8,
+        "temp_kf": 0.31,
+        "temp_max": 11.8,
+        "temp_min": 11.25,
+      }
+    }
+    weather={
+      Array [
+        Object {
+          "description": "light snow",
+          "icon": "13n",
+          "id": 600,
+          "main": "Snow",
+        },
+      ]
+    }
+  />
+  <WeatherCard
+    date="2020-01-31 06:00:00"
+    key="1580450400"
+    main={
+      Object {
+        "feels_like": -4.95,
+        "grnd_level": 729,
+        "humidity": 76,
+        "pressure": 1032,
+        "sea_level": 1032,
+        "temp": 4.24,
+        "temp_kf": 0.2,
+        "temp_max": 4.24,
+        "temp_min": 3.88,
+      }
+    }
+    weather={
+      Array [
+        Object {
+          "description": "broken clouds",
+          "icon": "04n",
+          "id": 803,
+          "main": "Clouds",
+        },
+      ]
+    }
+  />
+</div>
+`;

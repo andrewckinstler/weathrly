@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Current weather card should match a snapshot 1`] = `
+<section>
+  <div
+    className="today"
+  >
+    <div
+      className="current-container"
+    >
+      <h2>
+        Colorado
+      </h2>
+      <p
+        className="date"
+      >
+        Yesterday at 1:34 PM
+      </p>
+      <p
+        className="current-temp"
+      >
+        32
+        °
+      </p>
+      <p>
+        Rain
+      </p>
+    </div>
+    <div
+      className="minmax"
+    >
+      <img
+        alt="current condition"
+        src="http://openweathermap.org/img/wn/09d@2x.png"
+      />
+      <p>
+        <span
+          className="bold"
+        >
+          H:
+        </span>
+         
+        41
+        ° / 
+        <span
+          className="bold"
+        >
+          L:
+        </span>
+         
+        26
+        °
+      </p>
+      <p>
+        shower rain
+      </p>
+    </div>
+  </div>
+</section>
+`;

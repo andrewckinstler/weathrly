@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import { Header } from '../Header/Header';
 import { CurrentWeather } from '../CurrentWeather/CurrentWeather';
+import { WeatherList } from '../WeatherList/WeatherList';
 
 class App extends Component {
   constructor() {
@@ -12,8 +13,6 @@ class App extends Component {
       isLoading: true
     }
   }
-
-  // this.setState({ forcast: filterForcast(data.list) })
 
   componentDidMount = () => {
     let currentWeather = fetch('https://api.openweathermap.org/data/2.5/weather?q=colorado,us&units=imperial&appid=2a29c95d88e3e2717635332394645d67')
@@ -32,14 +31,13 @@ class App extends Component {
       this.setState({ currentWeather: data[0], forcast: filterForcast(data[1].list), isLoading: false })})
   }
 
-  
-
   render() {
     return (
       <div className="App">
         <Header /> 
         {!this.state.isLoading 
-        ? <CurrentWeather {...this.state.currentWeather}/> 
+        ? <><CurrentWeather {...this.state.currentWeather}/> 
+          <WeatherList props={this.state.forcast}/></>
         : <div>loading</div>}
         
       </div>
